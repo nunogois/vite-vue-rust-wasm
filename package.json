@@ -1,0 +1,27 @@
+{
+  "name": "vite-vue-rust-wasm",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "setup": "yarn && yarn build:wasm",
+    "setup:wasm": "wasm-pack build ./wasm --target web --dev",
+    "dev": "yarn watch:wasm & vite",
+    "build": "yarn build:wasm && vue-tsc --noEmit && vite build",
+    "build:wasm": "wasm-pack build ./wasm --target web --release",
+    "watch:wasm": "cd wasm && cargo watch -i .gitignore -i \"pkg/*\" -s \"wasm-pack build --target web --dev\"",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.7",
+    "tailwindcss": "^3.0.23",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
+    "vite-plugin-wasm-pack": "^0.1.9",
+    "vue-tsc": "^0.29.8"
+  }
+}
