@@ -2,6 +2,8 @@
 
 Example showcasing a new Vite project using Vue 3 + TypeScript + Tailwind CSS + Rust + WebAssembly.
 
+Check out a SvelteKit example [here](https://github.com/nunogois/sveltekit-rust-wasm).
+
 ## Quick Start
 
 ### Prerequisites
@@ -22,9 +24,9 @@ Example showcasing a new Vite project using Vue 3 + TypeScript + Tailwind CSS + 
 1. Created Vite + Vue3 + TS project with `npm init vite vite-vue-rust-wasm`;
 2. Added Tailwind CSS as per [these instructions](https://tailwindcss.com/docs/guides/vite);
 3. Created `wasm` package with `wasm-pack new wasm`;
-4. Installed [vite-plugin-wasm-pack](https://github.com/nshen/vite-plugin-wasm-pack) and added `wasm` package in `vite.config.ts`;
+4. Installed [vite-plugin-wasm-pack](https://github.com/nshen/vite-plugin-wasm-pack) with `yarn add -D vite-plugin-wasm-pack` and added `wasm` package in `vite.config.ts`;
 5. Added relevant scripts to `package.json`;
-6. Added Vue component `HelloWasm.vue` with Wasm example;
+6. Added Vue component `HelloWasm.vue` with WebAssembly example;
 
 # Vue 3 + Typescript + Vite
 
